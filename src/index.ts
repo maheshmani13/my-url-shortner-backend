@@ -10,6 +10,12 @@ dbConnect(
   "mongodb+srv://maheshmani223344:maheshmani12@cluster0.3nqf3of.mongodb.net/?retryWrites=true&w=majority"
 );
 
+app.get("/", (req, res) => {
+  res.json({
+    message: "Hello",
+  });
+});
+
 app.use("/url", UrlRoute);
 
 app.listen(PORT, () => {
