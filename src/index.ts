@@ -6,7 +6,9 @@ const app = express();
 const PORT = 3000;
 app.use(cors());
 app.use(express.json());
-dbConnect("mongodb://localhost:27017");
+dbConnect(
+  "mongodb+srv://maheshmani223344:maheshmani12@cluster0.3nqf3of.mongodb.net/?retryWrites=true&w=majority"
+);
 
 app.use("/url", UrlRoute);
 
