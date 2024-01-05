@@ -1,6 +1,8 @@
 import express from "express";
 import { dbConnect } from "./dbConnect.js";
 import UrlRoute from "./routes/Url.js";
+import AnalyticsRoute from "./routes/Analytics.js";
+
 import cors from "cors";
 const app = express();
 const PORT = 3000;
@@ -15,6 +17,8 @@ app.get("/", (req, res) => {
     message: "Hello",
   });
 });
+
+app.use("/analytics", AnalyticsRoute);
 
 app.use("/url", UrlRoute);
 

@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { UrlType } from "../type.js";
 
 const UrlSchema = new mongoose.Schema(
   {

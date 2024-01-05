@@ -10,6 +10,7 @@ export const NewUrlController = async (req: Request, res: Response) => {
     const urlEntry = await UrlModel.create({
       originial_url,
       url_string,
+      clicks: [],
     });
 
     return res.status(200).send({
